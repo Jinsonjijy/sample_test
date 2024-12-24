@@ -32,7 +32,13 @@ class homescreen extends StatelessWidget {
                 labelText: 'enter name'
               ),
             ),
-            ElevatedButton(onPressed: (){}, child: Text('click me'),style: ButtonStyle(backgroundColor:),)
+            ElevatedButton(onPressed: (){}, child: Text('click me'),style: ElevatedButton.styleFrom(
+              backgroundColor:const Color.fromARGB(255, 21, 14, 231),
+              foregroundColor: Colors.black
+            
+            ),
+            ),
+            Text('data will be show here')
           ],
         ),
       ),
