@@ -29,9 +29,10 @@ class homescreen extends StatelessWidget {
             Text('hello',style: TextStyle(fontSize: 60),),
             TextField(
               decoration: InputDecoration(
-                labelText: 'enter the name'
+                labelText: 'enter name'
               ),
-            )
+            ),
+            ElevatedButton(onPressed: (){}, child: Text('click me'),style: ButtonStyle(backgroundColor:),)
           ],
         ),
       ),
