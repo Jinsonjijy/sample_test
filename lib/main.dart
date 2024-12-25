@@ -17,8 +17,8 @@ class Myapp extends StatelessWidget {
   }
 }
 class homescreen extends StatelessWidget {
-  const homescreen({super.key});
-
+   homescreen({super.key});
+  final _textcontroller=TextEditingController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -28,11 +28,15 @@ class homescreen extends StatelessWidget {
           children: [
             Text('hello',style: TextStyle(fontSize: 60),),
             TextField(
+              controller:_textcontroller,
+              
               decoration: InputDecoration(
-                labelText: 'enter name'
+                labelText: 'Type something'
               ),
             ),
-            ElevatedButton(onPressed: (){}, child: Text('click me'),style: ElevatedButton.styleFrom(
+            ElevatedButton(onPressed: (){
+              print(_textcontroller.text);
+            }, child: Text('click me'),style: ElevatedButton.styleFrom(
               backgroundColor:const Color.fromARGB(255, 21, 14, 231),
               foregroundColor: Colors.black
             
