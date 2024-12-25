@@ -16,9 +16,16 @@ class Myapp extends StatelessWidget {
     );
   }
 }
-class homescreen extends StatelessWidget {
+class homescreen extends StatefulWidget {
    homescreen({super.key});
+
+  @override
+  State<homescreen> createState() => _homescreenState();
+}
+
+class _homescreenState extends State<homescreen> {
   final _textcontroller=TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,13 +43,18 @@ class homescreen extends StatelessWidget {
             ),
             ElevatedButton(onPressed: (){
               print(_textcontroller.text);
+              setState(() {
+                _textcontroller;
+              });
             }, child: Text('click me'),style: ElevatedButton.styleFrom(
               backgroundColor:const Color.fromARGB(255, 21, 14, 231),
               foregroundColor: Colors.black
             
             ),
             ),
-            Text('data will be show here')
+            Text(_textcontroller.text,style: TextStyle(
+              fontSize: 75
+            ),)
           ],
         ),
       ),
