@@ -12,37 +12,25 @@ class _ScreenHomeState extends State<ScreenHome> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: 
-         // padding: const EdgeInsets.all(25.0),
+         
            SafeArea(
-            
              child: Center(
-               child: Padding(
-                
-                 padding: const EdgeInsets.only(
-                  top: 200
-                 ),
                  child: Container(
                   color: Colors.deepOrange,
                    child: Column(
                     children: [
-                      Text('basic flutter counter app'),
                       Padding(
-                   
-                        padding: const EdgeInsets.only(top: 200),
-                        child: Center(
+                        padding: const EdgeInsets.all(8.0),
+                        child: Text('basic flutter counter app'),
+                      ),
+                        Center(
                           child: Text(_counter.toString()),
                         ),
-                      )
-                      
                     ],
-                    
-                             ),
+                        ),
                  ),
                ),
              ),
-           ),
-        
-    
       floatingActionButton: FloatingActionButton(onPressed:
        (){
         _counter=_counter+1;
