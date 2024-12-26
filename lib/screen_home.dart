@@ -12,21 +12,14 @@ class _ScreenHomeState extends State<ScreenHome> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
-       child: ListView(
-        children:List.generate(100,(index)
-        {
-         return Column(
-           children: [
-             Text('person $index'),
-             Divider(thickness: 5,color: Colors.pinkAccent,)
-           ],
-         );
-         
-        
-          
-
-        }),
-       ), 
+              child: ListView.separated(itemBuilder: (ctx,index){
+                return Text("person $index");
+              },
+               separatorBuilder: (ctx,index){
+               return Text('this is a seperator');
+               },
+               itemCount: 50
+               ),
       ),
     );
     
