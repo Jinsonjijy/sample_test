@@ -18,7 +18,7 @@ class _ScreenHomeState extends State<ScreenHome> {
                     subtitle: Text("hello how are you"),
                     leading: CircleAvatar(
                       radius: 30,
-                      backgroundImage: NetworkImage('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQyy4Udb9Yx3ntXPhpR7-dMzicNXGD1YmOsvA&s'),
+                      backgroundImage: AssetImage('assets/images/IMG-20240126-WA0079.jpg'),
                     ),
                     trailing: Text('$index:30 pm'),
                 );
