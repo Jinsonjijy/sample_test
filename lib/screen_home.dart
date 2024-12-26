@@ -8,40 +8,27 @@ class ScreenHome extends StatefulWidget {
 
 class _ScreenHomeState extends State<ScreenHome> {
   @override
-  int _counter=0;
+  
   Widget build(BuildContext context) {
     return Scaffold(
-      body: 
+      body: Container(
+       child: ListView(
+        children:List.generate(100,(index)
+        {
+         return Column(
+           children: [
+             Text('person $index'),
+             Divider(thickness: 5,color: Colors.pinkAccent,)
+           ],
+         );
          
-           SafeArea(
-             child: Center(
-                 child: Container(
-                  color: Colors.deepOrange,
-                   child: Column(
-                    children: [
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: Text('basic flutter counter app'),
-                      ),
-                        Center(
-                          child: Text(_counter.toString()),
-                        ),
-                    ],
-                        ),
-                 ),
-               ),
-             ),
-      floatingActionButton: FloatingActionButton(onPressed:
-       (){
-        _counter=_counter+1;
-        setState(() {
-          _counter;
-        });
-       },
-      child:
-       Icon(Icons.add_ic_call_outlined)
-       )
-        );
+        
+          
+
+        }),
+       ), 
+      ),
+    );
     
   }
 }
