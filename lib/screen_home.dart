@@ -12,24 +12,30 @@ class _ScreenHomeState extends State<ScreenHome> {
   
   Widget build(BuildContext context) {
     return Scaffold(
-      body: SafeArea(
-        child: Container(
-          color: Colors.black,
-          child: Column(
-            children: [
-              Text('homescreen',style: TextStyle(fontSize: 75,color: Colors.deepPurpleAccent),),
-              ElevatedButton(onPressed: (){
-                //  Navigator.of(context).push(MaterialPageRoute(builder: (ctx){
-                //   return  ScreenTwo();
-                // }));
-                Navigator.of(context).pushNamed('screen_2');
-              }, 
-              child: Text('click me')
-              )
-            ],
-          ),
-        ),
-      ),
+      body: 
+        
+             ListView.separated(
+              itemBuilder: (context,index){
+              return ListTile(
+                onTap: () {
+                  Navigator.of(context).push(MaterialPageRoute(builder: (context){
+                    return ScreenTwo(name:'peson $index' );
+                  }));
+                },
+                title: Text('peson $index'),
+                subtitle: Text('hello how are you where are you going'),
+                leading: CircleAvatar(
+                  backgroundImage: NetworkImage(''),
+                ),
+                trailing: Text(''),
+              );
+            }, separatorBuilder: (context,index){
+              return Divider();
+            }, itemCount: 50
+            )
+             
+            
+        
     );
     
   }

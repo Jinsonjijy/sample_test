@@ -15,14 +15,14 @@ class Myapp extends StatelessWidget {
         primarySwatch:Colors.cyan
       ),
       home: ScreenHome(),
-      routes: {
-        'screen_1':(context){
-          return ScreenHome();
-        },
-        'screen_2':(context){
-          return ScreenTwo();
-        }
-      }
+      // routes: {
+      //   'screen_1':(context){
+      //     return ScreenHome();
+      //   },
+      //   'screen_2':(context){
+      //     return ScreenTwo();
+      //   }
+      // }
     );
   }
 }
