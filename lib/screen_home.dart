@@ -23,7 +23,7 @@ class _ScreenHomeState extends State<ScreenHome> {
                   }));
                 },
                 title: Text('peson $index'),
-                subtitle: Text('hello how are you where are you going'),
+                subtitle: Text('hello how are you where are you '),
                 leading: CircleAvatar(
                   backgroundImage: NetworkImage(''),
                 ),
