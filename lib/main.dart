@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:testing_app/screen_home.dart';
+import 'package:testing_app/screen_two.dart';
 
 void main(){
   runApp(Myapp());
@@ -14,6 +15,14 @@ class Myapp extends StatelessWidget {
         primarySwatch:Colors.cyan
       ),
       home: ScreenHome(),
+      routes: {
+        'screen_1':(context){
+          return ScreenHome();
+        },
+        'screen_2':(context){
+          return ScreenTwo();
+        }
+      }
     );
   }
 }

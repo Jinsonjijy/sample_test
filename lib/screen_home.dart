@@ -19,9 +19,10 @@ class _ScreenHomeState extends State<ScreenHome> {
             children: [
               Text('homescreen',style: TextStyle(fontSize: 75,color: Colors.deepPurpleAccent),),
               ElevatedButton(onPressed: (){
-                 Navigator.of(context).push(MaterialPageRoute(builder: (ctx){
-                  return  ScreenTwo();
-                }));
+                //  Navigator.of(context).push(MaterialPageRoute(builder: (ctx){
+                //   return  ScreenTwo();
+                // }));
+                Navigator.of(context).pushNamed('screen_2');
               }, 
               child: Text('click me')
               )
