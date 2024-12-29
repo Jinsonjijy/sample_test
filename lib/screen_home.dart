@@ -12,27 +12,12 @@ class _ScreenHomeState extends State<ScreenHome> {
   
   Widget build(BuildContext context) {
     return Scaffold(
-      body: 
-        
-             ListView.separated(
-              itemBuilder: (context,index){
-              return ListTile(
-                onTap: () {
-                  Navigator.of(context).push(MaterialPageRoute(builder: (context){
-                    return ScreenTwo(name:'peson $index' );
-                  }));
-                },
-                title: Text('peson $index'),
-                subtitle: Text('hello how are you where are you '),
-                leading: CircleAvatar(
-                  backgroundImage: NetworkImage(''),
-                ),
-                trailing: Text(''),
-              );
-            }, separatorBuilder: (context,index){
-              return Divider();
-            }, itemCount: 50
-            )
+     body: Column(
+      children: [
+        ElevatedButton(onPressed: (){}, child: Text('store')),
+        ElevatedButton(onPressed: (){}, child:Text('show'))
+      ],
+     ),
              
             
         

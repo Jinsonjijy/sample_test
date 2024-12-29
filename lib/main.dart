@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
+// import 'package:shared_preferences/shared_preferences.dart';
 import 'package:testing_app/screen_home.dart';
-import 'package:testing_app/screen_two.dart';
+// import 'package:testing_app/screen_two.dart';
 
-void main(){
+
+ main() async{
+  
+  // SharedPreferences pref =SharedPreferencesAsync();
   runApp(Myapp());
 }
 class Myapp extends StatelessWidget {

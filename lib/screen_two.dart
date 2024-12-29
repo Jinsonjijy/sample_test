@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
 class ScreenTwo extends StatelessWidget {
-  final String name;
+  
 
-  const ScreenTwo({super.key,required this.name});
+  const ScreenTwo({super.key});
   
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-     appBar: AppBar(title: Text(name),),
+     appBar: AppBar(title: Text(''),),
       body: SafeArea(
         child: Container(
           color: const Color.fromARGB(255, 228, 224, 226),
@@ -17,7 +17,7 @@ class ScreenTwo extends StatelessWidget {
             children: [
               ElevatedButton(onPressed: (){
                 return  Navigator.of(context).pop();
-              }, child: Text(name))
+              }, child: Text(''))
               
             ],
           ),
