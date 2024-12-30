@@ -15,9 +15,7 @@ class ScreenTwo extends StatelessWidget {
           color: const Color.fromARGB(255, 228, 224, 226),
           child: Column(
             children: [
-              ElevatedButton(onPressed: (){
-                return  Navigator.of(context).pop();
-              }, child: Text(''))
+              Text('screen_2',style: TextStyle(fontSize: 200),)
               
             ],
           ),
