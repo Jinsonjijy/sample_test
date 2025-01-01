@@ -27,9 +27,9 @@ class _ScreenHomeState extends State<ScreenHome> {
               )
             ),
           ),
-         ElevatedButton(onPressed: (){
-          savedata(context);
-          getdata(context);
+         ElevatedButton(onPressed: () async{
+        await  savedata(context);
+        await  getdata(context);
 
          },
           child: Text('save date')
@@ -53,7 +53,7 @@ class _ScreenHomeState extends State<ScreenHome> {
   }
   Future<void> getdata(BuildContext context) async{
      name=prefs.getString('char_key');
-     print(name);
+     //print(name);
      if (name!=null) {
       Navigator.of(context).push(MaterialPageRoute(builder: (ctx){
         return ScreenTwo();
